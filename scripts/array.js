@@ -1,15 +1,17 @@
 //Array de média de temperatura
 console.log("Array de temperatura");
-var avgTemp = [];
+var avgTempSemana = [];
 
-avgTemp[0] = 31.9;
-avgTemp[1] = 35.3;
-avgTemp[2] = 42;
-avgTemp[3] = 38;
-avgTemp[4] = 25.5;
+var avgTempSemana1 = [33, 25.2, 19, 27, 23.4, 41.6, 25];
+var avgTempSemana2 = [41, 29, 33, 21.2, 19.5, 17, 33.8];
 
-for (var i = 0; i < avgTemp.length; i++) {
-  console.log("Array de temperatura", avgTemp[i]);
+avgTempSemana[0] = avgTempSemana1;
+avgTempSemana[1] = avgTempSemana2;
+
+for (var i = 0; i < avgTempSemana.length; i++) {
+  for (var j = 0; j < avgTempSemana[i].length; j++) {
+    console.log("Array 1 e 2 de temperatura: ", avgTempSemana[i][j]);
+  }
 }
 
 // Array dos dias da semana
@@ -53,4 +55,15 @@ numeros.unshift(-1);
 numeros.unshift(-3);
 numeros.unshift(-5);
 
-console.log("Números", numeros);
+// Removendo o ultimo elemento do array
+numeros.pop();
+
+numeros.shift();
+
+//Removendo elementos do array, partindo de acordo com a qnt indicada com splice
+numeros.splice(3, 3);
+console.log("numeros removidos com splice: ", numeros);
+
+//Inserir elementos em uma posição especifica do array com splice
+numeros.splice(3, 0, 3, 4, 5);
+console.log("numeros inseridos com splice: ", numeros);
